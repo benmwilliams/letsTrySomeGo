@@ -15,10 +15,7 @@ import (
 
 func main() {
 	fmt.Printf("What is your name? \n")
-
-	name := readline.ReadLine(os.Stdin, func(line string) {
-		return line
+	readline.ReadLine(os.Stdin, func(name string) {
+		fmt.Printf("Hello, %v \n", name)
 	})
-
-	fmt.Printf("Hello, %v \n", name)
 }
