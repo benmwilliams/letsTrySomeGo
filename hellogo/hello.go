@@ -1,8 +1,5 @@
-// NOTE: moved this file, changed the function of the program to ask for a name and then greet.
-// the original binary is still in go/bin, as well as the newly created hellogo.
-// this shows that the binary is created based on the dir name, and not the name of the source file
-// also there is a binary in this directory, and Im not sure if it's a result of a bad config of an errant build step
-// running both `hello` and `hellogo` work from any dir, so GOPATH and GOBIN must be correctly set.
+// NOTE: readline now works. Program will not exit, I don't know why. It just keeps reading from stdin, and nothing else happens,
+// even if I try to return from the function, or os.Exit(0) from within the function. Pretty sure I'm just retarded.
 
 package main
 
@@ -16,12 +13,13 @@ import (
 func main() {
 	fmt.Printf("What is your name? \n")
 	readline.ReadLine(os.Stdin, func(name string) {
-		if name != "\n" {
+		if name == "\r\n" {
+			fmt.Printf("found me")
+		} else {
 			fmt.Printf("Hello, %v \n", name)
 			fmt.Printf("Have a nice day! \n")
-		} else {
-			os.Exit(3)
+			fmt.Printf("name is %v . \n", name)
 		}
 	})
-
+	fmt.Printf("not in readline")
 }
