@@ -16,6 +16,12 @@ import (
 func main() {
 	fmt.Printf("What is your name? \n")
 	readline.ReadLine(os.Stdin, func(name string) {
-		fmt.Printf("Hello, %v \n", name)
+		if name != "\n" {
+			fmt.Printf("Hello, %v \n", name)
+			fmt.Printf("Have a nice day! \n")
+		} else {
+			os.Exit(3)
+		}
 	})
+
 }
