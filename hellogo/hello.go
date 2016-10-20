@@ -1,5 +1,6 @@
-// NOTE: readline now works. Program will not exit, I don't know why. It just keeps reading from stdin, and nothing else happens,
-// even if I try to return from the function, or os.Exit(0) from within the function. Pretty sure I'm just retarded.
+// NOTE: I'm definitely retarted.  Exiting the program from greet() makes it work as expected
+// UNLESS: you hit enter without typing anything.  a single character routes through the first part of the if{}
+// > 1 char gives you the else, but no chars just returns without running greet.
 
 package main
 
@@ -11,15 +12,21 @@ import (
 )
 
 func main() {
+	name := ""
 	fmt.Printf("What is your name? \n")
-	readline.ReadLine(os.Stdin, func(name string) {
-		if name == "\r\n" {
-			fmt.Printf("found me")
+
+	readline.ReadLine(os.Stdin, func(line string) {
+		r := []rune(line)
+		if len(r) <= 1 {
+			greet("found me")
 		} else {
-			fmt.Printf("Hello, %v \n", name)
-			fmt.Printf("Have a nice day! \n")
-			fmt.Printf("name is %v . \n", name)
+			name = line
+			greet(name)
 		}
 	})
-	fmt.Printf("not in readline")
+}
+
+func greet(n string) {
+	fmt.Printf("Hello, %v \nHave a nice day! \n", n)
+	os.Exit(0)
 }
