@@ -24,4 +24,3 @@ func ReadLine(reader io.Reader, f func(string)) {
 		f(string(line))
 	}
 }
-
