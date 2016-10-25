@@ -17,7 +17,7 @@ func main() {
 
 	readline.ReadLine(os.Stdin, func(line string) {
 		r := []rune(line)
-		if len(r) <= 1 {
+		if len(r) <= 1 || line == "" {
 			greet("found me")
 		} else {
 			name = line
