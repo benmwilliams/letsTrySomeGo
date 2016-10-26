@@ -1,4 +1,4 @@
-// NOTE: I'm definitely retarted.  Exiting the program from greet() makes it work as expected
+// NOTE: I'm definitely retarded.  Exiting the program from greet() makes it work as expected
 // UNLESS: you hit enter without typing anything.  a single character routes through the first part of the if{}
 // > 1 char gives you the else, but no chars just returns without running greet.
 
