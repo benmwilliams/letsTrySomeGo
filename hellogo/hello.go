@@ -2,6 +2,9 @@
 // UNLESS: you hit enter without typing anything.  a single character routes through the first part of the if{}
 // > 1 char gives you the else, but no chars just returns without running greet.
 
+// NOTE: just moved this project from arch linux to windows10... this bug
+// no longer takes effect, and the program seems to work as expected. Interesting.
+
 package main
 
 import (
