@@ -5,6 +5,9 @@
 // NOTE: just moved this project from arch linux to windows10... this bug
 // no longer takes effect, and the program seems to work as expected. Interesting.
 
+// NOTE: never forget to set git user.email and user.name
+// you want this shit to count. How else are people supposed to know that you're doing anything?
+
 package main
 
 import (
