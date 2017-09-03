@@ -5,6 +5,8 @@
 // NOTE: just moved this project from arch linux to windows10... this bug
 // no longer takes effect, and the program seems to work as expected. Interesting.
 
+// NOTE: Just tried on Ubuntu. Same bug as on arch. What is the meaning of this? Guess I should try on OSX too. Something about readline pkg doesn't work right, I guess.
+
 // NOTE: never forget to set git user.email and user.name
 // you want this shit to count. How else are people supposed to know that you're doing anything?
 
