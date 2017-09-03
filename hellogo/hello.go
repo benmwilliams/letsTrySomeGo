@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/benmwilliams/letsTrySomeGo/readline"
+	"letsTrySomeGo/readline"
 )
 
 func main() {
