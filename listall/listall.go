@@ -1,16 +1,23 @@
+// -dir only working properly if 2nd arg (or not preceded by non flag args?)
+// seems like it would work great if supply necessary ars with flags only.
+// can default filetype as `*`
+
 package main
 
 import (
 	"fmt"
 	"io/ioutil"
 	//	"letsTrySomeGo/readline"
-	//	"flag"
+	"flag"
 	"log"
 	"os"
 )
 
 func main() {
-	files, err := ioutil.ReadDir("./")
+	dirname := flag.String("dir", "./", "directory not found :(")
+	flag.Parse()
+
+	files, err := ioutil.ReadDir(*dirname)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -24,12 +31,12 @@ func main() {
 func getArgs() {
 	args := os.Args[1:]
 
+	//	if len(args) > 0 {
+	//		dir := args[0]
+	//		fmt.Println(dir)
+	//	}
 	if len(args) > 0 {
-		dir := args[0]
-		fmt.Println(dir)
-	}
-	if len(args) > 1 {
-		fileType := args[1]
+		fileType := args[0]
 		fmt.Println(fileType)
 	}
 }
