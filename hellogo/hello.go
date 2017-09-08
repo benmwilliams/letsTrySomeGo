@@ -13,6 +13,7 @@
 // readline package to do this, but I'm ready to close this and move on to
 // something else. This should really just be like 15 lines of code.
 // buuuut... why *does* it work the way I wanted on windows?
+// oh yeah. It works on windows because carriage return is a char (`^M`)
 
 package main
 
