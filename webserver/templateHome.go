@@ -30,10 +30,15 @@ func index(w http.ResponseWriter, r *http.Request) {
 	// https://stackoverflow.com/questions/25845172/parsing-date-string-in-golang
 	// and this go package:
 	// https://github.com/araddon/dateparse
+
+	// tl;dr
+	// use these exact literal values.
+	// I guess if I was full time in go land I would just memorize the string?
+	// So strange...
 	now := time.Now()
 	indexVars := PageVariables{
-		Date: now.Format("01-01-2020"),
-		Time: now.Format("15:15:15"),
+		Date: now.Format("02-01-2006"),
+		Time: now.Format("15:04:05"),
 	}
 
 	t, err := template.ParseFiles("index.html")
