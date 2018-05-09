@@ -7,3 +7,5 @@ of other gocode that I wrote. What I prefer is like
 "/$HOME/go/repo/thing-im-doing"... I know it doesn't really matter.
 
 #### TODO: decide if I want to follow convention with this or not
+
+testing git credential change
