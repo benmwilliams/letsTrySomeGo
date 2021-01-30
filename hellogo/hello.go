@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"os"
 
-	"letsTrySomeGo/readline"
+	"github.com/benmwilliams/letsTrySomeGo/readline"
 )
 
 func main() {
